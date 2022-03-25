@@ -1,0 +1,55 @@
+{
+  "name": "element-plus-plus",
+  "displayName": "Element Plus Plus",
+  "description": "Enhance your FE development experience, especially with Element UI/Plus.",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.65.0"
+  },
+  "publisher": "microkof",
+  "icon": "assets/logo.png",
+  "categories": [
+    "Other"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/microkof/vscode-element-plus-plus.git"
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "element-plus-plus.minifyImages",
+        "title": "Compress Images"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "element-plus-plus.minifyImages",
+          "group": "1_modification"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "yarn esbuild-base -- --minify",
+    "esbuild-base": "esbuild extension.js --bundle --outfile=out/main.js --external:vscode --format=cjs --platform=node"
+  },
+  "devDependencies": {
+    "glob": "^7.2.0",
+    "typescript": "^4.5.5"
+  },
+  "dependencies": {
+    "fs-extra": "^10.0.1",
+    "imagemin": "^7.0.1",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-mozjpeg": "9.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "imagemin-svgo": "9.0.0",
+    "readdirp": "^3.6.0"
+  }
+}
