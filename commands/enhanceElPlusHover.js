@@ -30,13 +30,34 @@ module.exports = function () {
 
       let tagsJson = fs.readJSONSync(tagsJsonBakPath);
       for (let node in tagsJson) {
+        const val = tagsJson[node];
+        // 修复 el-button 的属性书写错误
+        if (node === 'el-button') {
+          val.attributes = [
+            'type',
+            'size',
+            'plain',
+            'loading',
+            'disabled',
+            'icon',
+            'autofocus',
+            'native-type',
+            'round',
+            'circle',
+          ];
+        }
         if (tagsJson[node].attributes) {
-          const val = tagsJson[node];
           val.description = val.description.replace(
             '[Docs](https://element-plus.org',
-            `attributes: <${JSON.stringify(val.attributes).slice(1, -1).replace(/,/g, ' | ')}>\n\n[Docs](https://${
-              envIsZhCn ? 'element-plus.gitee.io' : 'element-plus.org'
-            }`
+            `attributes: ${JSON.stringify(val.attributes)
+              .slice(1, -1)
+              .replace(/"/g, '`')
+              .replace(/,/g, ' | ')}\n\n[Docs](https://${envIsZhCn ? 'element-plus.gitee.io' : 'element-plus.org'}`
+          );
+        } else {
+          val.description = val.description.replace(
+            '[Docs](https://element-plus.org',
+            `attributes: See Docs.\n\n[Docs](https://${envIsZhCn ? 'element-plus.gitee.io' : 'element-plus.org'}`
           );
         }
       }
@@ -48,14 +69,14 @@ module.exports = function () {
         val.description = val.description.replace(
           '[Docs](https://element-plus.org',
           `type: ${val.type}\n\n${
-            val.options ? `options: <${JSON.stringify(val.options).slice(1, -1).replace(/,/g, ' | ')}>\n\n` : ''
+            val.options ? `options: ${JSON.stringify(val.options).slice(1, -1).replace(/"/g, '`').replace(/,/g, ' | ')}\n\n` : ''
           }[Docs](https://${envIsZhCn ? 'element-plus.gitee.io' : 'element-plus.org'}`
         );
       }
       fs.writeJSONSync(attributesJsonPath, attributesJson);
 
       vscode.window.showInformationMessage(
-        'The Hover of VS Code for Element Plus has been enhanced by Element Plus Plus Extension.'
+        'Element Plus Plus Extension:\nThe Hover of VS Code for Element Plus has been enhanced. Enjoy it.'
       );
 
       elplusPackageJson.elppVersion = currentVersion;

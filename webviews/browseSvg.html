@@ -1,0 +1,225 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <script src="libs/vue.min.js"></script>
+    <link rel="stylesheet" href="libs/element-plus.css" />
+    <link rel="stylesheet" href="browseSvg.css" />
+    <script src="libs/element-plus.min.js"></script>
+    <script src="libs/tinycolor.min.js"></script>
+    <script src="libs/jQuery.min.js"></script>
+    <title>Browse SVG</title>
+  </head>
+  <body>
+    <div id="app">
+      <el-container :style="bodyCssVar">
+        <el-header class="padding-y-20">
+          <el-row justify="center">
+            <el-col :xs="18" :sm="15" :md="12" :lg="9" :xl="6">
+              <div>
+                <el-input v-model="keyword" class="w-100" placeholder="Search File Name Keyword" clearable></el-input>
+              </div>
+              <div class="flex justify-between">
+                <span class="usage" @click="dialogVisible = true">
+                  <el-button type="text">⊛ Guide</el-button>
+                </span>
+                <span class="copyright"
+                  >© Provided by
+                  <el-link
+                    type="primary"
+                    href="https://marketplace.visualstudio.com/items?itemName=microkof.element-plus-plus"
+                    target="_blank"
+                    >Element Plus Plus</el-link
+                  ></span
+                >
+              </div>
+            </el-col>
+          </el-row>
+          <el-color-picker v-model="darkBgColorBase"></el-color-picker>
+        </el-header>
+
+        <el-scrollbar>
+          <el-main class="padding-y-20">
+            <el-row :gutter="20">
+              <el-col
+                v-for="item in searchedSvgFullPathList"
+                :key="item.webviewUri"
+                :xs="6"
+                :sm="4"
+                :md="4"
+                :lg="3"
+                :xl="2"
+                class="svg-col"
+              >
+                <img :src="item.webviewUri" class="svg-img" />
+                <div class="svg-name">{{item.filename}}</div>
+                <div class="svg-button-group">
+                  <el-popover placement="top" :width="250" trigger="click">
+                    <template #reference>
+                      <div class="svg-button">El UI</div>
+                    </template>
+                    <el-input v-model="item.elUICode" class="w-100" readonly></el-input>
+                  </el-popover>
+
+                  <div class="svg-button" @click="onClickElPlus(item.filenameWithoutExt,item.elPlusCode)">El Plus</div>
+                </div>
+              </el-col>
+              <div v-show="!searchedSvgFullPathList.length" class="svg-warning-tip">
+                <el-result icon="warning" title="SVG No Found" sub-title="Please change keyword."></el-result>
+              </div>
+            </el-row>
+          </el-main>
+        </el-scrollbar>
+      </el-container>
+
+      <el-dialog v-model="dialogVisible" title="Guide" width="60%">
+        <el-tabs v-model="activeTabName" class="demo-tabs" @tab-click="handleClick">
+          <el-tab-pane label="For Elememt UI" name="For Elememt UI">
+            <h3>What is exported</h3>
+            <p>A line of code, such as: <el-tag>&lt;svg-icon icon-class="password" /&gt;</el-tag>.</p>
+            <h3>How to import</h3>
+            <p>
+              This extension assumes that you use famous
+              <el-link type="primary" href="https://panjiachen.github.io/vue-element-admin-site/zh/guide/" target="_blank"
+                >Vue Element Admin</el-link
+              >
+              or some UI frameworks based on it, which is characterized by the use of <el-tag>&lt;svg-icon&gt;</el-tag> component
+              tag. Therefore, the method of importing components is the same as that of Vue Element Admin, omitted here.
+            </p>
+            <p>
+              For details, see:
+              <el-link
+                type="primary"
+                href="https://panjiachen.github.io/vue-element-admin-site/zh/guide/advanced/icon.html"
+                target="_blank"
+              >
+                https://panjiachen.github.io/vue-element-admin-site/zh/guide/advanced/icon.html
+              </el-link>
+            </p>
+            <p>
+              If you are starting a project from scratch, it is recommended that you imitate Vue element Admin to implement
+              <el-tag>&lt;svg-icon&gt;</el-tag> components, because it is one of the best SVG icon components solutions in the
+              industry.
+            </p>
+            <h3>How to use</h3>
+            <p>
+              Paste the code <el-tag>&lt;svg-icon icon-class="password" /&gt;</el-tag> into <el-tag>&lt;template&gt</el-tag> and
+              add some styles.
+            </p>
+          </el-tab-pane>
+          <el-tab-pane label="For Elememt Plus" name="For Elememt Plus">
+            <h3>What is exported</h3>
+            <p>A JS file conforming to the official component specification of Element Plus.</p>
+            <h3>How to import</h3>
+            <p>Save the JS file into <el-tag>/components/svgIcon/</el-tag> (or somewhere else) folder.</p>
+            <p>Global registration:</p>
+            <pre style="white-space: pre-wrap">
+import Password from '@/components/svgIcon/Password.js';
+createApp(App).use(ElementPlus, { size: 'small'}).component('Password', Password).use(store).use(router).mount('#app');</pre
+            >
+            <p>Or local registration:</p>
+            <pre style="white-space: pre-wrap">
+import Password from '@/components/svgIcon/Password.js';
+export default {
+  components: {
+    Password
+  }
+}</pre
+            >
+            <p>
+              For details, see:
+              <el-link type="primary" href="https://element-plus.gitee.io/zh-CN/component/icon.html" target="_blank">
+                https://element-plus.gitee.io/zh-CN/component/icon.html
+              </el-link>
+            </p>
+            <h3>How to use</h3>
+            <p>
+              Paste the code
+              <el-tag>&lt;el-icon style="vertical-align: middle"&gt;&lt;Password /&gt;&lt;/el-icon&gt;</el-tag> into
+              <el-tag>&lt;template&gt</el-tag> and add some styles.
+            </p>
+          </el-tab-pane>
+        </el-tabs>
+      </el-dialog>
+    </div>
+    <script>
+      const App = {
+        data() {
+          return {
+            keyword: '',
+            darkBgColorBase: '#1d3b5d',
+            svgFullPathList: [],
+            dialogVisible: false,
+            activeTabName: `For Elememt UI`,
+          };
+        },
+        computed: {
+          bodyCssVar() {
+            return {
+              '--dark-bg-color-base': this.darkBgColorBase,
+              '--dark-bg-color-dark-1': tinycolor(this.darkBgColorBase).darken(5).toString(),
+              '--dark-bg-color-dark-2': tinycolor(this.darkBgColorBase).darken(10).toString(),
+              '--dark-bg-color-dark-3': tinycolor(this.darkBgColorBase).darken(15).toString(),
+              '--dark-bg-color-light-1': tinycolor(this.darkBgColorBase).lighten(5).toString(),
+              '--el-input-bg-color': tinycolor(this.darkBgColorBase).lighten(10).toString(),
+              '--el-fill-color-blank': tinycolor(this.darkBgColorBase).lighten(10).toString(),
+              '--el-input-border-color': tinycolor(this.darkBgColorBase).lighten(20).toString(),
+              '--el-text-color-primary': tinycolor.mix(this.darkBgColorBase, '#fff', 90).toString(),
+              '--el-text-color-regular': tinycolor.mix(this.darkBgColorBase, '#fff', 85).toString(),
+              '--el-text-color-placeholder': tinycolor.mix(this.darkBgColorBase, '#fff', 50).toString(),
+              '--el-border-color': tinycolor(this.darkBgColorBase).lighten(25).toString(),
+              '--el-input-hover-border-color': tinycolor(this.darkBgColorBase).lighten(50).toString(),
+            };
+          },
+          searchedSvgFullPathList() {
+            return this.svgFullPathList.filter((p) => p.filename.includes(this.keyword));
+          },
+        },
+        methods: {
+          onClickElPlus(filenameWithoutExt, elPlusCode) {
+            const $svgCode = $(elPlusCode);
+            let componentCode = [];
+            const _hoisted_list = $svgCode
+              .find('path')
+              .map((i) => {
+                return '_hoisted_' + (i + 2);
+              })
+              .get();
+
+            componentCode.push(`import { defineComponent, openBlock, createBlock, createVNode } from 'vue';`);
+            componentCode.push(`var script = defineComponent({ name: '${filenameWithoutExt + 'Icon'}' });`);
+            componentCode.push(`const _hoisted_1 = { xmlns: 'http://www.w3.org/2000/svg', viewBox: '0 0 1024 1024' };`);
+            $svgCode.find('path').each((i, p) => {
+              componentCode.push(
+                `const ${_hoisted_list[i]} = /* @__PURE__ */ createVNode(
+  'path',
+  {
+    fill: 'currentColor',
+    d: '${$(p).attr('d')}'
+  },
+  null,
+  -1
+);`
+              );
+            });
+            componentCode.push(
+              `function render(_ctx, _cache, $props, $setup, $data, $options) {
+  return openBlock(), createBlock('svg', _hoisted_1, [${_hoisted_list.join(', ')}]);
+}`
+            );
+            componentCode.push(`script.render = render;`);
+            componentCode.push(`export default script;`);
+
+            const aEl = document.createElement('a');
+            aEl.download = filenameWithoutExt + '.js';
+            aEl.href = URL.createObjectURL(new Blob([componentCode.join('\n')], { type: 'text/plain' }));
+            aEl.click();
+          },
+        },
+      };
+      const app = Vue.createApp(App);
+      app.use(ElementPlus);
+      app.mount('#app');
+    </script>
+  </body>
+</html>

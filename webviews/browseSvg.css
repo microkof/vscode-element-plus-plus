@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  min-height: 100vh;
+}
+
+#app,
+.el-container {
+  height: 100%;
+}
+
+.relative {
+  position: relative;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.padding-y-20 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.padding-10 {
+  padding: 10px;
+}
+
+.el-header {
+  position: relative;
+  height: auto !important;
+  background-color: var(--dark-bg-color-dark-1);
+}
+
+.el-color-picker {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.usage {
+  font-size: 10px;
+  line-height: 2;
+  cursor: pointer;
+}
+.copyright {
+  color: var(--el-text-color-placeholder);
+  font-size: 10px;
+  line-height: 2;
+}
+
+.el-main {
+  background-color: var(--dark-bg-color-base);
+  min-height: calc(100vh - 104px);
+}
+
+.svg-col {
+  position: relative;
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 20px auto;
+}
+
+.svg-col:hover .svg-button-group {
+  display: flex;
+}
+
+.svg-img {
+  padding: 10px;
+  width: 50%;
+}
+
+.svg-name {
+  color: var(--el-text-color-regular);
+  padding: 10px;
+  font-size: 12px;
+}
+
+.svg-button-group {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  right: 20px;
+  display: none;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.svg-button {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: var(--dark-bg-color-dark-1);
+  color: var(--el-text-color-regular);
+}
+
+.svg-button:hover {
+  background-color: var(--dark-bg-color-dark-2);
+  color: red;
+}
+
+.svg-warning-tip {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
