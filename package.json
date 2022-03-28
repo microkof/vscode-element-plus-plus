@@ -2,7 +2,7 @@
   "name": "element-plus-plus",
   "displayName": "Element Plus Plus",
   "description": "Enhance your FE development experience, especially with Element UI/Plus.",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "engines": {
     "vscode": "^1.65.0"
   },

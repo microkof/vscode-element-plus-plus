@@ -20,11 +20,11 @@ This extension enhances the above tips, and you can try to avoid relying on memo
 
 1. When you hover over a tag, you will be prompted for all the attributes of this tag. The comparison before and after use is as follows:
 
-![Before](https://wx2.sinaimg.cn/mw2000/3e2cf89cly1h0oly6q98kj20b601qaae.jpg)
+![Before](https://microkof.gitee.io/vscode-e-p-p/enhance-plus-tag-before.png)
 
-⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇
+<center>⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇</center>
 
-![After](https://wx3.sinaimg.cn/mw2000/3e2cf89cly1h0oly6y9eaj20cq033mxz.jpg)
+![After](https://microkof.gitee.io/vscode-e-p-p/enhance-plus-tag-after.png)
 
 2. This extension determines the link of `Docs` according to the language of the operating system. If it is in the Simplified Chinese OS, replace the link with the domestic site to avoid the annoying "建议大陆用户访问部署在国内的站点，是否跳转？" Tips.
 
@@ -36,11 +36,11 @@ Note: only the simplified Chinese operating system will be modified, and other l
 
 3. When you hover over an attribute, you will be prompted for the data type and optional value of this attribute. The comparison before and after use is as follows:
 
-![Before](https://wx3.sinaimg.cn/mw2000/3e2cf89cly1h0omqoe7tij20ea02oab4.jpg)
+![Before](https://microkof.gitee.io/vscode-e-p-p/enhance-plus-attr-before.png)
 
-⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇
+<center>⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇</center>
 
-![After](https://wx3.sinaimg.cn/mw2000/3e2cf89cly1h0oly7985uj20kp05hjtm.jpg)
+![After](https://microkof.gitee.io/vscode-e-p-p/enhance-plus-attr-after.png)
 
 ### Attention
 
@@ -54,19 +54,19 @@ Similar to the above Function 1, this time is to enhance the mouse over prompt o
 
 1. When you hover over a tag, you will be prompted for all the attributes of this tag. The comparison before and after use is as follows:
 
-![Before](https://wx1.sinaimg.cn/mw2000/3e2cf89cly1h0pe0j6xtpj207d01dwen.jpg)
+![Before](https://microkof.gitee.io/vscode-e-p-p/enhance-ui-tag-before.png)
 
-⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇
+<center>⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇</center>
 
-![After](https://wx2.sinaimg.cn/mw2000/3e2cf89cly1h0pe0je6q7j20er04c40x.jpg)
+![After](https://microkof.gitee.io/vscode-e-p-p/enhance-ui-tag-after.png)
 
 2. When you hover over an attribute, you will be prompted for the data type and optional value of this attribute. The comparison before and after use is as follows:
 
-![Before](https://wx4.sinaimg.cn/mw2000/3e2cf89cly1h0pe0jba64j20330170sn.jpg)
+![Before](https://microkof.gitee.io/vscode-e-p-p/enhance-ui-attr-before.png)
 
-⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇
+<center>⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇</center>
 
-![After](https://wx1.sinaimg.cn/mw2000/3e2cf89cly1h0pe0jhe0sj207l024t8w.jpg)
+![After](https://microkof.gitee.io/vscode-e-p-p/enhance-ui-attr-after.png)
 
 Note: Due to incomplete data collection at present, some attributes have no options prompt, and all official manual links have not been added. Later versions will be added one after another.
 
@@ -92,7 +92,7 @@ Select any number of SVG files or folders containing SVG file from the Explorer 
 
 ## Release Notes
 
-### 2.0.0 - 2022-03-27
+### 2.0.1 - 2022-03-27
 
 Add the function of "browse SVG list and export code fragments".
 
@@ -124,11 +124,11 @@ Initialize Release.
 
 1. 鼠标悬停在标签上时，会提示该标签的所有属性。使用前后对比如下：
 
-![使用前](https://wx2.sinaimg.cn/mw2000/3e2cf89cly1h0oly6q98kj20b601qaae.jpg)
+![安装前](https://microkof.gitee.io/vscode-e-p-p/enhance-plus-tag-before.png)
 
-⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇
+<center>⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇</center>
 
-![使用后](https://wx3.sinaimg.cn/mw2000/3e2cf89cly1h0oly6y9eaj20cq033mxz.jpg)
+![安装后](https://microkof.gitee.io/vscode-e-p-p/enhance-plus-tag-after.png)
 
 2. 本扩展根据操作系统的语言确定`Docs`的链接，如果处于简体中文操作系统中，则替换链接为国内站点，以避免出现烦人的“建议大陆用户访问部署在国内的站点，是否跳转？”提示。
 
@@ -140,11 +140,11 @@ Initialize Release.
 
 3. 鼠标悬停在属性上时，会提示该属性的类型和可选值。使用前后对比如下：
 
-![使用前](https://wx3.sinaimg.cn/mw2000/3e2cf89cly1h0omqoe7tij20ea02oab4.jpg)
+![安装前](https://microkof.gitee.io/vscode-e-p-p/enhance-plus-attr-before.png)
 
-⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇
+<center>⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇</center>
 
-![使用后](https://wx3.sinaimg.cn/mw2000/3e2cf89cly1h0oly7985uj20kp05hjtm.jpg)
+![安装后](https://microkof.gitee.io/vscode-e-p-p/enhance-plus-attr-after.png)
 
 ### 注意事项
 
@@ -158,19 +158,19 @@ Initialize Release.
 
 1. 鼠标悬停在标签上时，会提示该标签的所有属性。使用前后对比如下：
 
-![使用前](https://wx1.sinaimg.cn/mw2000/3e2cf89cly1h0pe0j6xtpj207d01dwen.jpg)
-
-⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇
-
-![使用后](https://wx2.sinaimg.cn/mw2000/3e2cf89cly1h0pe0je6q7j20er04c40x.jpg)
-
-2. 鼠标悬停在属性上时，会提示该属性的类型和可选值。使用前后对比如下：
-
-![使用前](https://wx4.sinaimg.cn/mw2000/3e2cf89cly1h0pe0jba64j20330170sn.jpg)
+![安装前](https://microkof.gitee.io/vscode-e-p-p/enhance-ui-tag-before.png)
 
 <center>⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇</center>
 
-![使用后](https://wx1.sinaimg.cn/mw2000/3e2cf89cly1h0pe0jhe0sj207l024t8w.jpg)
+![安装后](https://microkof.gitee.io/vscode-e-p-p/enhance-ui-tag-after.png)
+
+2. 鼠标悬停在属性上时，会提示该属性的类型和可选值。使用前后对比如下：
+
+![安装前](https://microkof.gitee.io/vscode-e-p-p/enhance-ui-attr-before.png)
+
+<center>⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇</center>
+
+![安装后](https://microkof.gitee.io/vscode-e-p-p/enhance-ui-attr-after.png)
 
 ### 注意事项
 
