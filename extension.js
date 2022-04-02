@@ -1,12 +1,11 @@
-const browseSvg = require('./commands/browseSvg');
 const enhanceElPlusHover = require('./commands/enhanceElPlusHover');
 const enhanceEluiHover = require('./commands/enhanceEluiHover');
+const browseSvg = require('./commands/browseSvg');
 
 function activate(context) {
-  context.subscriptions.push(browseSvg(context));
-
   enhanceElPlusHover();
   enhanceEluiHover();
+  browseSvg(context);
 }
 
 function deactivate() {}

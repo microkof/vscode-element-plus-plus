@@ -75,9 +75,7 @@ module.exports = function () {
       }
       fs.writeJSONSync(attributesJsonPath, attributesJson);
 
-      vscode.window.showInformationMessage(
-        'Element Plus Plus Extension:\nThe Hover of VS Code for Element Plus has been enhanced. Enjoy it.'
-      );
+      vscode.window.showInformationMessage('The Hover of VS Code for Element Plus has been enhanced. Enjoy it.');
 
       elplusPackageJson.elppVersion = currentVersion;
       fs.writeJSONSync(elplusPackageJsonPath, elplusPackageJson, { spaces: 2 });

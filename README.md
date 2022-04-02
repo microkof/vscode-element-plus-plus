@@ -8,39 +8,51 @@ This extension is a development enhancement tool for Element UI and Element Plus
 
 When this extension is not used but only the Vetur extension is used, the Hover of Element Plus components is as follows (take the `<el-row>` component and its `justify` attribute as an example):
 
-1. When the mouse hovers over the label, it will prompt `Docs`. Click `Docs` to go to the official manual. However, you can't see the attributes of this component, so you need to recall or query the official manual. It's annoying.
+#### 1. When hover over a tag
 
-2. Click `Docs` to open the official manual, but if you open the manual in Simplified Chinese OS, you will see "建议大陆用户访问部署在国内的站点，是否跳转？". It's annoying.
+When the mouse hovers over the label, it will prompt `Docs`. Click `Docs` to go to the official manual. However, you can't see the attributes of this component, so you need to recall or query the official manual or tap a space next to the tag and look up the properties from the drop-down list. It's annoying.
 
-3. When the mouse hovers over the component attribute, it will prompt the text introduction and default value of this attribute. For example, the prompt of `justify` is `horizontal alignment of flex layout, default: start` and `Docs`. However, you can't see the data type and optional values of `justify`, so you need to recall or query the official manual. It's annoying.
+#### 2. Link of 'Docs'
+
+Click `Docs` to open the official manual, but if you open the manual in Simplified Chinese OS, you will see "建议大陆用户访问部署在国内的站点，是否跳转？". It's annoying.
+
+#### 3. When hover over an attribute
+
+When the mouse hovers over the component attribute, it will prompt the text introduction and default value of this attribute. For example, the prompt of `justify` is `horizontal alignment of flex layout, default: start` and `Docs`. However, you can't see the data type and optional values of `justify`, so you need to recall or query the official manual or delete `justify="start"` into `justify=`, then tap a `"`, and then look up the properties from the drop-down list. It's annoying.
 
 ### Performance after installing Element Plus Plus extension
 
 This extension enhances the above tips, and you can try to avoid relying on memories or referring to the official Manual:
 
-1. When you hover over a tag, you will be prompted for all the attributes of this tag. The comparison before and after use is as follows:
+#### 1. When hover over a tag
 
-![Before](https://microkof.gitee.io/vscode-e-p-p/enhance-plus-tag-before.png)
+When you hover over a tag, you will be prompted for all the attributes of this tag. The comparison before and after use is as follows:
+
+<center>![Before](https://microkof.gitee.io/vscode-e-p-p/enhance-plus-tag-before.png)</center>
 
 <center>⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇</center>
 
-![After](https://microkof.gitee.io/vscode-e-p-p/enhance-plus-tag-after.png)
+<center>![After](https://microkof.gitee.io/vscode-e-p-p/enhance-plus-tag-after.png)</center>
 
-2. This extension determines the link of `Docs` according to the language of the operating system. If it is in the Simplified Chinese OS, replace the link with the domestic site to avoid the annoying "建议大陆用户访问部署在国内的站点，是否跳转？" Tips.
+#### 2. Link of 'Docs'
+
+This extension determines the link of `Docs` according to the language of the operating system. If it is in the Simplified Chinese OS, replace the link with the domestic site to avoid the annoying "建议大陆用户访问部署在国内的站点，是否跳转？" Tips.
 
 Originally: [https://element-plus.org/en-US/component/layout.html](https://element-plus.org/en-US/component/layout.html)
 
 Now: [https://element-plus.gitee.io/zh-CN/component/layout.html](https://element-plus.gitee.io/zh-CN/component/layout.html)
 
-Note: only the simplified Chinese operating system will be modified, and other language operating systems will not be changed.
+Note: only the Simplified Chinese operating system will be modified, and other language operating systems will not be changed.
 
-3. When you hover over an attribute, you will be prompted for the data type and optional value of this attribute. The comparison before and after use is as follows:
+#### 3. When hover over an attribute
 
-![Before](https://microkof.gitee.io/vscode-e-p-p/enhance-plus-attr-before.png)
+When you hover over an attribute, you will be prompted for the data type and optional value of this attribute. The comparison before and after use is as follows:
+
+<center>![Before](https://microkof.gitee.io/vscode-e-p-p/enhance-plus-attr-before.png)</center>
 
 <center>⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇</center>
 
-![After](https://microkof.gitee.io/vscode-e-p-p/enhance-plus-attr-after.png)
+<center>![After](https://microkof.gitee.io/vscode-e-p-p/enhance-plus-attr-after.png)</center>
 
 ### Attention
 
@@ -52,21 +64,25 @@ Similar to the above Function 1, this time is to enhance the mouse over prompt o
 
 ### Performance after installing Element Plus Plus extension
 
-1. When you hover over a tag, you will be prompted for all the attributes of this tag. The comparison before and after use is as follows:
+#### 1. When hover over a tag
 
-![Before](https://microkof.gitee.io/vscode-e-p-p/enhance-ui-tag-before.png)
+When you hover over a tag, you will be prompted for all the attributes of this tag. The comparison before and after use is as follows:
 
-<center>⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇</center>
-
-![After](https://microkof.gitee.io/vscode-e-p-p/enhance-ui-tag-after.png)
-
-2. When you hover over an attribute, you will be prompted for the data type and optional value of this attribute. The comparison before and after use is as follows:
-
-![Before](https://microkof.gitee.io/vscode-e-p-p/enhance-ui-attr-before.png)
+<center>![Before](https://microkof.gitee.io/vscode-e-p-p/enhance-ui-tag-before.png)</center>
 
 <center>⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇</center>
 
-![After](https://microkof.gitee.io/vscode-e-p-p/enhance-ui-attr-after.png)
+<center>![After](https://microkof.gitee.io/vscode-e-p-p/enhance-ui-tag-after.png)</center>
+
+#### 2. Hover over an attribute
+
+When you hover over an attribute, you will be prompted for the data type and optional value of this attribute. The comparison before and after use is as follows:
+
+<center>![Before](https://microkof.gitee.io/vscode-e-p-p/enhance-ui-attr-before.png)</center>
+
+<center>⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇</center>
+
+<center>![After](https://microkof.gitee.io/vscode-e-p-p/enhance-ui-attr-after.png)</center>
 
 Note: Due to incomplete data collection at present, some attributes have no options prompt, and all official manual links have not been added. Later versions will be added one after another.
 
@@ -92,9 +108,13 @@ Select any number of SVG files or folders containing SVG file from the Explorer 
 
 ## Release Notes
 
-### 2.0.1 - 2022-03-27
+### 2.0.1 - 2022-03-29
 
-Add the function of "browse SVG list and export code fragments".
+Add the function of "Automatically extract the classname of CSS file in the project to realize automatic completion during input".
+
+### 2.0.1 - 2022-03-28
+
+Add the function of "Browse SVG list and export code fragments".
 
 The function of compressing pictures has been removed because it has nothing to do with this extension.
 
@@ -112,25 +132,29 @@ Initialize Release.
 
 未使用本扩展，只使用 Vetur 扩展时，Element Plus 组件的鼠标悬停提示功能表现为（以`el-row`组件和它的`justify`属性为例）：
 
-1. 鼠标悬停在标签上时，会提示`Docs`，点击`Docs`可前往官方手册。但是，看不到组件有哪些属性，需要依靠回忆或查询官方手册，很烦。
+1. 鼠标悬停在标签上时，会提示`Docs`，点击`Docs`可前往官方手册。但是，看不到组件有哪些属性，需要依靠回忆或查询官方手册或紧贴标签敲一个空格，然后从下拉列表查阅属性，很烦。
 
 2. 点击`Docs`可打开官方手册，但是简体中文用户打开手册会看到“建议大陆用户访问部署在国内的站点，是否跳转？”的提示，很烦。
 
-3. 鼠标悬停在组件属性上时，会提示属性的文字介绍和默认值，例如`justify`的提示是`horizontal alignment of flex layout, default: start. Docs`。但是，看不到`justify`的数据类型和可选值，需要靠回忆或查询官方手册，很烦。
+3. 鼠标悬停在组件属性上时，会提示属性的文字介绍和默认值，例如`justify`的提示是`horizontal alignment of flex layout, default: start. Docs`。但是，看不到`justify`的数据类型和可选值，需要靠回忆或查询官方手册或把`justify="start"`删成`justify=`，然后敲一个`"`，然后从下拉列表查阅属性，很烦。
 
 ### 安装本扩展后的表现
 
 本扩展增强了以上提示，可以尽量避免依赖回忆或查阅官方手册：
 
-1. 鼠标悬停在标签上时，会提示该标签的所有属性。使用前后对比如下：
+#### 1. 鼠标悬停于标签时
 
-![安装前](https://microkof.gitee.io/vscode-e-p-p/enhance-plus-tag-before.png)
+鼠标悬停在标签上时，会提示该标签的所有属性。使用前后对比如下：
+
+<center>![安装前](https://microkof.gitee.io/vscode-e-p-p/enhance-plus-tag-before.png)</center>
 
 <center>⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇</center>
 
-![安装后](https://microkof.gitee.io/vscode-e-p-p/enhance-plus-tag-after.png)
+<center>![安装后](https://microkof.gitee.io/vscode-e-p-p/enhance-plus-tag-after.png)</center>
 
-2. 本扩展根据操作系统的语言确定`Docs`的链接，如果处于简体中文操作系统中，则替换链接为国内站点，以避免出现烦人的“建议大陆用户访问部署在国内的站点，是否跳转？”提示。
+#### 2. Docs 的链接
+
+本扩展根据操作系统的语言确定`Docs`的链接，如果处于简体中文操作系统中，则替换链接为国内站点，以避免出现烦人的“建议大陆用户访问部署在国内的站点，是否跳转？”提示。
 
 官方手册国际站链接举例：[https://element-plus.org/en-US/component/layout.html](https://element-plus.org/en-US/component/layout.html)
 
@@ -138,13 +162,15 @@ Initialize Release.
 
 注意：只针对简体中文操作系统做修改，其他语言操作系统不受改动。
 
-3. 鼠标悬停在属性上时，会提示该属性的类型和可选值。使用前后对比如下：
+#### 3. 鼠标悬停于属性时
 
-![安装前](https://microkof.gitee.io/vscode-e-p-p/enhance-plus-attr-before.png)
+鼠标悬停在属性上时，会提示该属性的类型和可选值。使用前后对比如下：
+
+<center>![安装前](https://microkof.gitee.io/vscode-e-p-p/enhance-plus-attr-before.png)</center>
 
 <center>⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇</center>
 
-![安装后](https://microkof.gitee.io/vscode-e-p-p/enhance-plus-attr-after.png)
+<center>![安装后](https://microkof.gitee.io/vscode-e-p-p/enhance-plus-attr-after.png)</center>
 
 ### 注意事项
 
@@ -156,27 +182,31 @@ Initialize Release.
 
 ### 安装本扩展后的表现
 
-1. 鼠标悬停在标签上时，会提示该标签的所有属性。使用前后对比如下：
+#### 1. 鼠标悬停于标签时
 
-![安装前](https://microkof.gitee.io/vscode-e-p-p/enhance-ui-tag-before.png)
+鼠标悬停在标签上时，会提示该标签的所有属性。使用前后对比如下：
 
-<center>⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇</center>
-
-![安装后](https://microkof.gitee.io/vscode-e-p-p/enhance-ui-tag-after.png)
-
-2. 鼠标悬停在属性上时，会提示该属性的类型和可选值。使用前后对比如下：
-
-![安装前](https://microkof.gitee.io/vscode-e-p-p/enhance-ui-attr-before.png)
+<center>![安装前](https://microkof.gitee.io/vscode-e-p-p/enhance-ui-tag-before.png)</center>
 
 <center>⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇</center>
 
-![安装后](https://microkof.gitee.io/vscode-e-p-p/enhance-ui-attr-after.png)
+<center>![安装后](https://microkof.gitee.io/vscode-e-p-p/enhance-ui-tag-after.png)</center>
+
+#### 2. 鼠标悬停于属性时
+
+鼠标悬停在属性上时，会提示该属性的类型和可选值。使用前后对比如下：
+
+<center>![安装前](https://microkof.gitee.io/vscode-e-p-p/enhance-ui-attr-before.png)</center>
+
+<center>⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇</center>
+
+<center>![安装后](https://microkof.gitee.io/vscode-e-p-p/enhance-ui-attr-after.png)</center>
 
 ### 注意事项
 
 由于目前资料收集不全，所以一部分属性没有可选项提示、并且全部没有添加官方手册链接，之后版本会陆续添加。
 
-## 功能 3. 浏览 SVG 列表
+## 功能 3. 浏览 SVG 列表、搜索 SVG 文件、导出适用于 Element UI、Element Plus 的 template 代码片段
 
 ### 其他扩展的缺陷
 

@@ -19,7 +19,6 @@ module.exports = function () {
             if (!editor) return;
 
             const text = document.getText(document.getWordRangeAtPosition(position, /el-[a-z\-]+|[a-z\-]+/));
-            console.log(text, 'text');
 
             if (elementTagsJson[text]) {
               const markdownString = new vscode.MarkdownString();
